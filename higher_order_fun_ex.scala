@@ -2,6 +2,16 @@
 //fun1 (Int) => Int
 //fun2 (Int,Int) => Int
 
+//Passing a fucntion inside a function
+val fun1 = (x:Int) => x+1
+val square = (x:Int) => x*x
+val cube = (x:Int) =>square(x)*x
+val newfun = (f:Int =>Int,x:Int,y:Int) => f(x) + f(y)
+newfun(square,3,4)
+newfun((x:Int)=>x*x,4,5)
+List(1,2,3).map(square)
+(1,34,4)
+
 val fun0 = () => 5
 fun0
 fun0()
