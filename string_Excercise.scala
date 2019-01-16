@@ -18,3 +18,24 @@ val new_str = name1.toIndexedSeq
 //(e) Write code that will take a sequence of Int, like the one you just made, and give you back a String. 
 // (Note that if you get a sequence of Char you can use mkString to get a simple Stringfrom it.)
 val final_str = new_str.mkString.filter((x:Char) => !x.isWhitespace)
+
+
+/*
+name1: String = ABBAVARAM LIJI THA  R E D DY  
+spacetrim: String => String = $Lambda$3064/270664479@3cbf8206
+res4: String = ABBAVARAMLIJITHAREDDY
+
+res5: String = ABBAVARAMLIJITHAREDDY
+res6: String = ABBAVARAMLIJITHAREDDY
+
+vowels: scala.collection.immutable.Set[Char] = Set(E, e, u, U, A, a, I, i, O, o)
+res7: String = BBVRM LJ TH  R  D DY  
+
+
+res8: Array[String] = Array(ABBAVARAM, LIJI THA  R E D DY  )
+
+new_str: scala.collection.immutable.IndexedSeq[Char] = Vector(A, B, B, A, V, A, R, A, M,  , L, I, J, I,  , T, H, A,  ,  , R,  , E,  , D,  , D, Y,  ,  )
+
+
+final_str: String = ABBAVARAMLIJITHAREDDY
+
