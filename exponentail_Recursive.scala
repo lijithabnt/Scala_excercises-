@@ -1,10 +1,17 @@
-//exponential
-def exponential(n:Int,x:Int):Int = {
-  if(x==0){
-    return 1
-  }
-  else{
-    n*exponential(n,x-1)
-  }
+//recurssion
+def exponum(x:Int,n:Int):Int = {
+  if(n == 0)
+    1
+  else
+    x * exponum(x,n-1)
 }
-exponential(4,9)
+
+//tail recurssion
+def expTail(x: Int, n: Int, res: Int = 1): Int = {
+  if (n == 0) res
+  else expTail(x, n-1, x * res)
+}
+
+
+exponum(6,3)
+expTail(4,5)
