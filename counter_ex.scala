@@ -1,3 +1,6 @@
+//create a class wihch accepts an argument and a method to incr/decr and overload method to accepting an increment and decrement val
+
+
 package lectures.part1Basics
 
 class counter(var c:Int) {
@@ -30,3 +33,7 @@ object newobj extends  App {
   println(ex.c)
 }
 /*
+//12
+10
+16
+16
