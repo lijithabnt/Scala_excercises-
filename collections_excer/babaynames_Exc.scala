@@ -60,5 +60,19 @@ oobject namesofbabies extends App {
 
   readeachfile2.foreach(println)
 
+  //TO RETRIEVE most popular name both male and female state wize for a given year provided as input
+  val readeachfile3 = readfilestxt.flatMap(x => Source.fromFile(s"$x").getLines.toList)
+    .map(x => (x.split(",")(0),x.split(",")(1),x.split(",")(2), x.split(",")(3), x.split(",")(4)))
+    .filter(x => x._3 == year)
+    .filter(x => x._2 == gender)
+    .groupBy(x => x._1)
+    .mapValues(x => (x(0)._4,x(0)._5)).toList
+    .map(x => List(x._1,x._2._1,x._2._2))
+  //.take(10)
+
+  readeachfile3.foreach(println)
+
 }
+
+
 
